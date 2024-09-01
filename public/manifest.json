@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "WatchPro BETA",
+  "version": "1.0.1",
+  "description": "WatchPro helps you to create unlimited watchlists and manage them.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["https://in.tradingview.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://in.tradingview.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
