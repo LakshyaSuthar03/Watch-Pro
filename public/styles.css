@@ -1,18 +1,17 @@
 /* General container styles */
 .watchlistContainer {
-  position: fixed;
+  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right:5%;
+  transform: translateY(-50%);
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 10px;
-  width: 50vw;
-  max-width: 600px;
+  width: auto;
   height: 500px;
   max-height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #ffffff;
   z-index: 1000;
 }
@@ -26,37 +25,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 12px 15px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #ddd;
-  background-color: #f5f5f5;
-  transition: background-color 0.3s;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.stockItem a {
-  text-decoration: none;
+.stockItem img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.stockItem p {
+  font-weight: 500;
   color: #333;
-  flex-grow: 1;
+  margin: 0;
+  font-size: 16px;
 }
 
 .stockItem:hover {
-  background-color: #e0e0e0;
+  background-color: #e9ecef;
+  transform: translateY(-2px);
 }
 
 /* Logo button styles */
 #logoW {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
   border-radius: 10px;
   text-align: center;
   margin-top: 10px;
   cursor: pointer;
 }
 
-
-
-
-
-
+/* Dropdown selector styles */
 #watchlistSelector {
   width: 100%;
   padding: 10px;
@@ -73,13 +81,13 @@
   outline: none;
 }
 
-/* Style for the create new watchlist button */
-#createWatchlist, .widgetButton > button {
- 
+/* Button styles */
+#createWatchlist,
+.widgetButton > button {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -89,32 +97,96 @@
 #createWatchlist {
   background-color: #007bff;
 }
+
 .widgetButton > button {
-  padding-left:15px;
-  padding-right:15px;
-  background-color: #28a745;
+  padding: 10px;
+  font-size: 14px;
 }
+
 #createWatchlist:hover {
   background-color: #0056b3;
 }
 
-/* Style for the stocks container */
+.add-button {
+  background-color: #28a745;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+.remove-button {
+  background-color: #F7525F;
+}
+
+.remove-button:hover {
+  background-color: #d9233a;
+}
+
+/* Button icon styles */
+.button-icon {
+  display: inline-block;
+}
+
+.button-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Technical and fundamental buttons */
+.technical-button,
+.fundamental-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.technical-button {
+  background-color: #4a90e2; /* Blue */
+}
+
+.fundamental-button {
+  background-color: #28a745; /* Green */
+}
+
+.technical-button:hover {
+  background-color: #357abd;
+}
+
+.fundamental-button:hover {
+  background-color: #218838;
+}
+
+/* Stock item button container */
+.stockItem .button-w6lVe_oI {
+  display: flex;
+  gap: 5px;
+}
+
+/* Title styling */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.widgetButton {
+  display: flex;
+  gap: 5px;
+}
+
 #stocksContainer {
   margin-top: 10px;
-}
-
-/* Style for individual stock items */
-.stockItem {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.stockItem a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-}
-
-.stockItem a:hover {
-  text-decoration: underline;
 }

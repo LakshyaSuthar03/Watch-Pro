@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://in.tradingview.com/*"],
-      "js": ["contentScript.js"],
+      "js": ["contentScript.js","importWatchlist.js"],
       "css": ["styles.css"]
     }
   ]
